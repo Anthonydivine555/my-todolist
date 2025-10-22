@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to-do-list</title>
+</head>
+<link rel="stylesheet" href="css/to.css">
+<link rel="stylesheet" href="css/themify-icons/themify-icons.css">
+<body>
+  <header>
+    <h1>tony's task scheduler</h1>
+  </header>
+
+  <div class="content">
+      <div class="input-task">
+
+          <input type="text" placeholder="enter task" id="input1" required>
+      
+          <select name="list of tasks" id="top-priority" required>
+            <option value="" disabled selected>priority</option>
+              <option value="top">top</option>
+              <option value="least">least</option>
+          </select>
+          
+          <input type="date" id="input2" required>
+
+        <input type="submit" value="add task" id="btn1" onclick="
+          displayingHtml()
+        ">
+    </div>
+
+    <p class="empty-input"></p>
+    
+    <div class="container"></div>
+
+    <p class="empty-message"></p>
+  </div>
+
+   <script src="script/todolist.js"></script>  
+</body>
+</html>
+
