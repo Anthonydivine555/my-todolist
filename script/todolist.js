@@ -57,57 +57,57 @@ function arrangeHtml() {
 let timeout;
 
 function displayingHtml() {
-const nameElement = document.querySelector('#input1')
-const name = nameElement.value;
+  const nameElement = document.querySelector('#input1')
+  const name = nameElement.value;
 
-const priorityElement = document.querySelector('#top-priority')
-const priority = priorityElement.value;
+  const priorityElement = document.querySelector('#top-priority')
+  const priority = priorityElement.value;
 
-const dateElement = document.querySelector('#input2')
-const deadline = dateElement.value;
+  const dateElement = document.querySelector('#input2')
+  const deadline = dateElement.value;
 
-const generatedId = Math.floor(Math.random() * 100);
-console.log(generatedId)
+  const generatedId = Math.floor(Math.random() * 100);
+  console.log(generatedId)
 
-if (dateElement.value == '' || priorityElement.value == '' || dateElement.value == '') {
-      document.querySelector('.empty-input').innerHTML = 'please complete the input!'
+  if (dateElement.value == '' || priorityElement.value == '' || dateElement.value == '') {
+        document.querySelector('.empty-input').innerHTML = 'please complete the input!'
 
-      clearTimeout(timeout);
+        clearTimeout(timeout);
 
-      timeout = setTimeout(() => {
-        document.querySelector('.empty-input')
-          .innerHTML = ''
-      }, 2000)
-    } else {
+        timeout = setTimeout(() => {
+          document.querySelector('.empty-input')
+            .innerHTML = ''
+        }, 2000)
+      } else {
 
-        todoArray.push({
-        name: name,
-        priority: priority,
-        deadline: deadline,
-        id: generatedId
-      });
-
-
-      // saveTodoArray ();
-
-      if (todoArray) {
-    const blankMessage = document.querySelector('.empty-message');
-    blankMessage.innerHTML = '';
-
-    document.querySelector('.container').style.display = "flex"
-    
-  } 
-
-  arrangeHtml();
+          todoArray.push({
+          name: name,
+          priority: priority,
+          deadline: deadline,
+          id: generatedId
+        });
 
 
-  dateElement.value = ''
-  priorityElement.value = ''
-  nameElement.value = ''
+        // saveTodoArray ();
 
-   }
+        if (todoArray) {
+      const blankMessage = document.querySelector('.empty-message');
+      blankMessage.innerHTML = '';
 
-    console.log(todoArray.id)
+      document.querySelector('.container').style.display = "flex"
+      
+    } 
+
+    arrangeHtml();
+
+
+    dateElement.value = ''
+    priorityElement.value = ''
+    nameElement.value = ''
+
+    }
+
+      console.log(todoArray.id)
 }
 
 function saveTodoArray () { 
@@ -124,7 +124,6 @@ function deleteTodolist(TodolistId) {
      }
   }) 
   todoArray = newlist;
-  console.log(todoArray)
   saveTodoArray ();
 }
 

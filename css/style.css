@@ -4,14 +4,23 @@
     box-sizing: border-box;
     list-style: none;
 }
+
+@font-face{
+    font-family:'urbanist';
+    src:url('../font/Urbanist/Urbanist-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal italic;
+    font-display: swap;
+}
+
 body, html{
    overflow-x: scroll; 
 }
 body{
     font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-transform: capitalize;
      overflow: auto;
+     font-family: 'urbanist', sans-serif;
 }
 
 header h1{
